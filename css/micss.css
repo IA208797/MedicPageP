@@ -1,0 +1,260 @@
+:root {
+  --blue: DeepSkyBlue;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+body {
+  background: var(--light);
+  color: var(--dark);
+}
+
+section {
+  color: var(--gray);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--gray-dark);
+}
+
+.ftco-navbar-light.scrolled {
+  background: var(--info) !important;
+  color: var(--dark);
+}
+
+.nav-link span {
+  font-weight: 600;
+  color: var(--dark);
+}
+
+/* .ftco-navbar-light .navbar-nav > .nav-item .nav-link.active {
+    color: var(--teal);
+} */
+
+/* FLOAT */
+
+.float {
+  position: fixed;
+  z-index: 21;
+  bottom: 50px;
+  right: 50px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 54px -8px rgba(0, 0, 0, 0.51);
+  transition: ease 1s;
+  /* background-color: rgb(114,137,218); */
+  animation: dentrando 0.5s ease-out, floating 2s ease infinite;
+  background-color: rgb(44, 47, 51);
+}
+
+.img-w {
+  width: 50px;
+  height: 50px;
+  padding: 6px;
+  fill: rgb(114, 137, 218);
+}
+
+.float:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 0px 20px 1px rgb(0, 0, 0, 64%);
+}
+
+@keyframes dentrando {
+  0% {
+    right: -150px;
+    bottom: -150px;
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 0.2;
+  }
+
+  100% {
+    right: 50px;
+    bottom: 50px;
+    opacity: 1;
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: scale(1.0);
+    box-shadow: 0px 0px 54px -8px rgba(0, 0, 0, 0.51);
+  }
+
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0x 0px 20px 1px rgb(0 0 0 / 64%);
+  }
+
+  100% {
+    transform: scale(1.0);
+    box-shadow: 0px 0px 54px -8px rgba(0, 0, 0, 0.51);
+  }
+}
+
+
+/* ------------------ */
+
+#scroll-animate {
+  overflow: hidden;
+}
+
+#scroll-animate-main {
+  width: 100%;
+  left: 0;
+  position: fixed;
+}
+
+#heightPage,
+#heightScroll {
+  width: 10px;
+  top: 0;
+  position: absolute;
+  z-index: 99;
+}
+
+#heightPage {
+  left: 0;
+}
+
+#heightScroll {
+  right: 0;
+}
+
+header {
+  width: 100%;
+  height: 100%;
+  background: url(../images/patron2.png) no-repeat 50% -50%;
+  background-size: cover;
+  top: 0;
+  position: fixed;
+  z-index: -1;
+  /* filter: blur(4px); */
+}
+
+footer {
+  /* width: 100%;
+  height: 300px; */
+  background: gray;
+  bottom: -300px;
+  position: fixed;
+  z-index: -1;
+}
+
+.content {
+  /* height: 1000px; */
+  /* min-height: 1000px; */
+  /* background: #ededed; */
+  position: relative;
+  z-index: 1;
+}
+
+.wrapper-parallax {
+  margin-top: 100%;
+  margin-bottom: 300px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 150px;
+  /* color: #fff; */
+}
+
+/* header h1 {} */
+
+
+
+footer h1 {
+  line-height: 300px;
+}
+
+header,
+footer,
+#scroll-animate-main {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  transition-property: all;
+
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0, 1);
+  -moz-transition-timing-function: cubic-bezier(0, 0, 0, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0, 1);
+}
+
+#about-section {
+  background-color: var(--light);
+}
+
+#about-section .img {
+  background-position: top !important;
+}
+
+
+ul .d-flex span {
+  color: var(--dark) !important;
+}
+
+#projects-section {
+  background-color: white;
+  background: url(../images/patron6.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#projects-section h2 {
+  color: black;
+  /* text-shadow:  0px 0px 3px var(--teal); */
+}
+
+.black {
+  color: var(--dark) !important;
+}
+
+.white{
+  color: var(--light) !important;
+}
+
+.gray{
+  color: rgba(128, 128, 128, 0.201) !important;
+}
